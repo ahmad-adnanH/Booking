@@ -12,24 +12,27 @@ class Review extends Model
 
     protected $fillable = [
         'user_id',
-        'hall_id',
-        'booking_id',
+        'classroom_id',
+        'reservation_id',
         'rating',
         'comment',
     ];
+
 
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    public function hall(): BelongsTo
+
+    public function classroom(): BelongsTo
     {
-        return $this->belongsTo(Hall::class);
+        return $this->belongsTo(Classroom::class);
     }
 
-    public function booking(): BelongsTo
+
+    public function reservation(): BelongsTo
     {
-        return $this->belongsTo(Booking::class);
+        return $this->belongsTo(Reservation::class);
     }
 }

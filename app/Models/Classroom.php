@@ -4,24 +4,33 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Hall extends Model
+class Classroom extends Model
 {
     use HasFactory;
 
     protected $fillable = [
+        'building_id',
+        'room_number',
         'name',
-        'hall_number',
         'capacity',
-        'building',
         'floor',
+        'status',
     ];
 
-    public function bookings(): HasMany
+
+    public function building(): BelongsTo
     {
-        return $this->hasMany(Booking::class);
+        return $this->belongsTo(Building::class);
     }
+
+    public function reservations(): HasMany
+    {
+        return $this->hasMany(Reservation::class);
+    }
+
 
     public function reviews(): HasMany
     {

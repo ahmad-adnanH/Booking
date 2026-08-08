@@ -11,10 +11,9 @@ return new class extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('hall_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('booking_id')->constrained()->cascadeOnDelete();
-            $table->tinyInteger('rating');
-            $table->text('comment');       
+            $table->foreignId('classroom_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('reservation_id')->nullable()->constrained()->nullOnDelete();
+            $table->text('comment')->nullable();  
             $table->timestamps();
         });
     }
