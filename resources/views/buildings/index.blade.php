@@ -18,10 +18,14 @@
             <table class="w-full text-right border-collapse">
                 <thead>
                     <tr class="bg-gray-50 border-b text-gray-600 text-sm">
+
                         <th class="p-4">#</th>
+
                         <th class="p-4">اسم المبنى</th>
                         <th class="p-4">القاعات التابعة</th>
                         <th class="p-4 text-center">الإجراءات</th>
+                          <th class="p-4">ahmad</th>
+
                     </tr>
                 </thead>
                 <tbody class="divide-y">
@@ -59,12 +63,15 @@
 
                                     <a href="{{ route('buildings.edit', $building->id) }}" class="text-blue-600 hover:underline text-sm font-semibold">تعديل</a>
 
-                                    <form action="{{ route('buildings.destroy', $building->id) }}" method="POST" onsubmit="return confirm('هل أنت تأكد من الحذف؟')">
+                                    <form action="{{ route('buildings.edit', $building->id) }}" method="POST" >
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="text-red-600 hover:underline text-sm font-semibold">حذف</button>
                                     </form>
                                 </div>
+                            </td>
+                            <td>
+                                alsa
                             </td>
                         </tr>
                     @empty

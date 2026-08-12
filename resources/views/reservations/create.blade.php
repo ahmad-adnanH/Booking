@@ -37,11 +37,18 @@
                         </select>
                     </div>
 
-                    <!-- تاريخ الحجز -->
-                    <div class="mb-4">
-                        <label class="block text-gray-700 font-bold mb-2">تاريخ الحجز <span class="text-red-500">*</span></label>
-                        <input type="date" name="date" value="{{ old('date', date('Y-m-d')) }}" required class="w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-200">
-                    </div>
+ <!-- تاريخ الحجز -->
+<div class="mb-4">
+    <label class="block text-gray-700 font-bold mb-2">تاريخ الحجز <span class="text-red-500">*</span></label>
+    <input
+        type="date"
+        name="date"
+        id="date"
+        value="{{ old('date', date('Y-m-d')) }}"
+        required
+        class="w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-200"
+    >
+</div>
 
                     <!-- أوقات الحجز -->
                     <div class="grid grid-cols-2 gap-4 mb-4">

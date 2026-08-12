@@ -1,0 +1,55 @@
+[33mcommit 7b64e25487f1647f4e8fe4fdd462a9451ab48cc7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: ahmad-adnanH <ahmad2000199000@gmail.com>
+Date:   Sat Aug 8 16:34:08 2026 +0300
+
+    first commit
+
+ app/Http/Controllers/Api/AuthApiController.php     |  70 [32m+++++[m
+ app/Http/Controllers/Api/AuthController.php        | 114 [31m--------[m
+ app/Http/Controllers/Api/BookingController.php     | 193 [31m-------------[m
+ app/Http/Controllers/Api/BuildingApiController.php |  53 [32m++++[m
+ .../Controllers/Api/ClassroomApiController.php     |  61 [32m+++++[m
+ app/Http/Controllers/Api/HallController.php        |  28 [31m--[m
+ app/Http/Controllers/Api/ReviewController.php      |  80 [31m------[m
+ .../Controllers/Auth/RegisteredUserController.php  |   3 [32m+[m[31m-[m
+ app/Http/Controllers/BookingController.php         | 115 [31m--------[m
+ app/Http/Controllers/BuildingController.php        |  76 [32m++++++[m
+ app/Http/Controllers/ClassroomController.php       |  87 [32m++++++[m
+ app/Http/Controllers/HallController.php            |  20 [31m--[m
+ app/Http/Controllers/ProfileController.php         |  60 [31m----[m
+ app/Http/Controllers/ReservationController.php     |  47 [32m++++[m
+ app/Http/Controllers/ReviewController.php          |  63 [31m-----[m
+ app/Http/Middleware/AdminMiddleware.php            |  19 [31m--[m
+ app/Http/Resources/BookingResource.php             |  41 [31m---[m
+ app/Http/Resources/ReviewResource.php              |  28 [31m--[m
+ app/Models/Booking.php                             |  36 [31m---[m
+ app/Models/Building.php                            |  24 [32m++[m
+ app/Models/{Hall.php => Classroom.php}             |  19 [32m+[m[31m-[m
+ app/Models/Reservation.php                         |  31 [32m+++[m
+ app/Models/Review.php                              |  15 [32m+[m[31m-[m
+ app/Models/User.php                                |  26 [32m+[m[31m-[m
+ app/Policies/BookingPolicy.php                     |  52 [31m----[m
+ bootstrap/app.php                                  |   9 [32m+[m[31m-[m
+ composer.lock                                      | 304 [32m+++++++++++[m[31m----------[m
+ .../0001_01_01_000000_create_users_table.php       |   3 [32m+[m[31m-[m
+ .../2026_08_04_142029_create_buildings_table.php   |  24 [32m++[m
+ .../2026_08_04_142030_create_classrooms_table.php  |  29 [32m++[m
+ ...2026_08_04_142031_create_reservations_table.php |  30 [32m++[m
+ ... => 2026_08_04_163948_create_reviews_table.php} |   7 [32m+[m[31m-[m
+ database/seeders/DatabaseSeeder.php                |   7 [32m+[m[31m-[m
+ public/index.php                                   |   7 [32m+[m[31m-[m
+ resources/views/bookings/index.blade.php           |  62 [31m-----[m
+ resources/views/buildings/create.blade.php         |  38 [32m+++[m
+ resources/views/buildings/edit.blade.php           |  27 [32m++[m
+ resources/views/buildings/index.blade.php          |  79 [32m++++++[m
+ resources/views/classrooms/create.blade.php        |  75 [32m+++++[m
+ resources/views/classrooms/edit.blade.php          |  45 [32m+++[m
+ resources/views/dashboard.blade.php                |  27 [32m+[m[31m-[m
+ resources/views/halls/index.blade.php              |  87 [31m------[m
+ resources/views/layouts/app.blade.php              | 115 [32m+++++[m[31m---[m
+ resources/views/layouts/navigation.blade.php       |  74 [32m++[m[31m---[m
+ resources/views/reservations/create.blade.php      |  75 [32m+++++[m
+ resources/views/reservations/index.blade.php       |  72 [32m+++++[m
+ routes/api.php                                     |  31 [32m+[m[31m--[m
+ routes/web.php                                     |  51 [32m++[m[31m--[m
+ 48 files changed, 1293 insertions(+), 1346 deletions(-)
